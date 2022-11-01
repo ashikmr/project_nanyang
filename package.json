@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --config webpack.config.js"
+    "start": "webpack serve --config webpack.config.js",
+    "build-dev": "webpack --watch --progress --config webpack.config.js",
+    "build-prod": "NODE_ENV=production webpack --watch --config webpack.config.js",
+    "stylelint-check": "stylelint-config-prettier-scss-check"
   },
   "keywords": [],
   "author": "",
