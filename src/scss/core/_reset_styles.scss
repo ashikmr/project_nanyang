@@ -1,0 +1,117 @@
+@import "~rfs/scss";
+/*
+ The goal of a reset stylesheet is to reduce browser inconsistencies in
+ things like default line heights, margins and font sizes of headings, and so on.
+ By resetting your styles, you avoid defaulting to the browser’s built-in styles, which differs from browser to browser.
+*/
+
+// Reset Styles
+
+/* 
+       1. a) Remove default margin and border.
+          b) Use a more-intuitive box-sizing model.
+*/
+* {
+	margin: 0;
+	border: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+// body,
+// html {
+// 	-webkit-font-smoothing: antialiased;
+// }
+
+/* 
+	2.For rem-unit it converts in decimal.
+                2.4rem = 2.4 * 10px = 24px;
+*/
+html {
+	font-size: 62.5%;
+	position: relative;
+	// Addin smooth-scroll behavior.
+	// scroll-behavior: smooth;
+}
+
+/* 
+	3.a)Fixed margin-top for navbar.	
+		b)Add accessible line-height
+*/
+body {
+	// @include rfs(6.4rem, margin-top);
+	line-height: 1.5;
+}
+
+/* 
+	4. Setting appropriate line-height for all <h> elements.
+*/
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.05;
+	// character unit
+	// max-width: 60ch;
+}
+
+/* 
+	5. Setting appropriate width for <p> elements.
+*/
+p {
+	max-width: 60ch;
+}
+
+/* 
+	6. Removing default list-styles and link styles
+*/
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 
+	7.	Improve media defaults.
+*/
+img {
+	max-width: 100%;
+	display: block;
+	// object-fit: cover;
+}
+
+/* 
+	8. Inherit fonts for form controls
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 
+	9. Word wrapping.
+	The overflow-wrap property lets us tweak the line-wrapping algorithm, and
+	give it permission to use hard wraps when no soft wrap opportunties can be found.
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}

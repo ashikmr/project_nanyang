@@ -1,0 +1,181 @@
+// The @mixin directive lets you create CSS code
+// that is to be reused throughout the website.
+
+// ####### EXPLAINATION #########
+// Defining a Mixin
+// @mixin name {
+//   property: value;
+//   property: value;
+//   ...
+// }
+
+// Using a Mixin
+// selector {
+//   @include mixin-name;
+// }
+
+//
+// Font-Type: Source-sans/serif-Pro font-family
+//
+
+@mixin font-type($font_type, $weight) {
+	font-family: $font_type;
+	font-weight: $weight;
+}
+
+/* 
+	To define width and height in one go.
+
+	===== Usage =====
+	div {
+		// You can pass width && height
+		@include box(200px, 300px);
+
+		// or just pass width and the height will default to the width value 
+		@include box(200px);
+
+	}
+*/
+@mixin box($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+/* 
+	===== FLEXBOX UTILITIES =====
+*/
+// 1. Flexbox display
+@mixin display_flexbox {
+	display: flex;
+}
+
+// 2. Align items vertically.
+/* 
+	===== Usage =====
+	div {
+		@include flex_align_items(center);
+		@include flex_align_items(flex-start);
+		@include flex_align_items(flex-end);
+	}
+*/
+@mixin flex_align_items($pos) {
+	@include display_flexbox();
+	align-items: $pos;
+}
+
+// 3. Align items horizontally.
+/* 
+	===== Usage =====
+	div {
+		@include flex_justify_content(center);
+		@include flex_justify_content(space-between);
+		@include flex_justify_content(space-around);
+		@include flex_justify_content(space-evenly);
+	}
+*/
+@mixin flex_justify_content($pos) {
+	@include display_flexbox();
+	justify-content: $pos;
+}
+
+// 4. Move items to the center of content.
+@mixin flex_center {
+	@include display_flexbox();
+	align-items: center;
+	justify-content: center;
+}
+
+// 5. Set the direction of the flexible items.
+@mixin flex-direction($value: row) {
+	flex-direction: $value;
+}
+
+// 6. Flex order
+// The order property controls the order in which the flex items appear
+// within the flex container.
+@mixin flex_order($order) {
+	order: $order;
+}
+
+/* 
+	===== GRID_DISPLAY UTILITIES =====
+*/
+// Ensure CSS grid works with IE 11 spec.
+// 1. Grid Display
+@mixin display_grid {
+	display: grid;
+}
+
+// 2. Align items vertically.
+@mixin grid_align_items($pos: stretch) {
+	@include display_grid();
+	align-items: $pos;
+}
+
+// 3. Align items horizontally.
+@mixin grid_justify_content($pos: flex-start) {
+	@include display_grid();
+	justify-content: $pos;
+}
+
+// 4. Move items to the center of content.
+@mixin grid_center {
+	@include display_grid();
+	align-items: center;
+	justify-content: center;
+}
+
+/*  
+	============================== GRID COLUMNS ===========================
+
+	The grid-template-columns property specifies the number (and the widths) of columns
+	in a grid layout.
+	The values are a space separated list, where each value specifies the size of the 
+	respective column.
+	
+	repeat() tells Grid to create multiple tracks with the same size parameters
+	(not necessarily the same size, though in this case they all end up being the same).
+*/
+// 1. Even grid columns
+@mixin grid_template_columns($cols, $width) {
+	@include display_grid();
+	grid-template-columns: repeat($cols, $width);
+}
+
+// 2. Grid minmax(min, max)
+/*  
+	Defines a size range greater than or equal to min and less than or equal to max.
+
+	We can use minmax() as a value for a grid column or row.
+
+	**NOTE: The value for min has to be smaller than the value for max. Fr units can’t be 
+	used for the min value, but they can absolutely be used for the max value. In fact, 
+	using a 1fr as the max value will ensure that the track expands and takes up the
+	available space:
+				.container {
+					display: grid;
+					grid-template-columns: minmax(250px, 1fr) 1fr;
+				}
+
+*/
+@mixin grid_minmax($cols, $min_width, $max_width) {
+	@include display_grid();
+	grid-template-columns: repeat($cols, minmax($min_width, $max_width));
+}
+
+/*  
+	=============== VENDOR PREFIXES ===================
+*/
+// 1. Override webkit and mozilla style appearnces for iPhone and iPad.
+@mixin override_webkit_inputstyle {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+/*  
+	=============== Cross-browser transition support ===================
+*/
+@mixin transition_support($seconds: 0.4s){
+  transition: all $seconds ease;
+}
+

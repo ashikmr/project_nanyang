@@ -1,0 +1,28 @@
+/*
+  The @use rule loads mixins, functions, and variables from other Sass stylesheets,
+  and combines CSS from multiple stylesheets together.
+  Stylesheets loaded by @use are called "modules".
+  All imported members are namespaced by default.
+
+  @use "<url>" as <namespace>
+ */
+// Loading colors stylesheet and defining its namespace as "col"
+@use "../core/colors" as col;
+
+// Function for returning primary_black/white colors
+// p_color: primary_color
+// s_color: secondary_color
+
+@function p_color($clr, $variant) {
+	@return map-get(map-get(col.$primary, $clr), $variant);
+}
+
+// Function for returning secondary_black colors
+@function s_color($clr, $variant) {
+	@return map-get(map-get(col.$secondary, $clr), $variant);
+}
+
+// Function for $colors map
+@function palette($clr, $variant) {
+	@return map-get(map-get(col.$colors, $clr), $variant);
+}

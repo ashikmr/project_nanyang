@@ -1,0 +1,100 @@
+// Custom style for blogapp/templates/blogapp/navbar.html
+/*
+../core folder contains colors, fonts and reset_styles scss files. Only reset_styles.scss code will be globally used evrey time.
+
+../core as c is used as a namespace for core sfiles.
+
+../abstracts folder contains animations, functions and mixins.
+
+../abstracts as abs is also used as a namespace for abstracts files.
+ */
+@use "../core" as c;
+@use "../abstracts" as abs;
+
+/*
+RFS is a unit resizing engine which was initially developed to 
+resize font sizes (hence its abbreviation for Responsive Font Sizes).
+Nowadays RFS is capable of rescaling basically every value for any css 
+property with units, like margin, padding, border-radius or even box-shadow.
+
+Source: https://www.npmjs.com/package/rfs
+ */
+@import "../../../node_modules/rfs/scss";
+
+// .navbar --> parent class
+.navbar{
+  background-color: abs.p_color(true_black, base);
+  @include abs.flex_align_items(center);
+  justify-content: space-around;
+  @include abs.font-type(c.$s_sans_font, c.$rg);
+  @include font-size(1.6rem);
+  // Take all the available space horizontally.
+  min-width: 100%;
+  // Height of the navbar.
+  @include rfs(6.4rem, height);
+
+  // Home/Logo text link color
+  &__homelink a{
+    color: abs.palette(beige, bright);
+    @include abs.transition_support();
+    &:hover{
+      color: lighten(abs.palette(beige, bright), 20%);
+    }
+  }
+
+  &__mid_navigation,
+  &__login-search{
+    // aligning navigation links horizontally
+    @include abs.flex_align_items(center);
+    justify-content: space-around;
+
+    // Adding space between letters. 
+    letter-spacing: 1px;
+
+    // link-items
+    li{
+       margin: 0 1.6rem; // adding space between the links
+    }
+
+    // Navbar link colors
+    a{
+      color: abs.palette(beige, base);
+    }
+  }
+
+  // Capitalizing mid-section links and log in text.
+  button,
+  &__mid_navigation__links a{
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+  
+  // Login button
+  &__login-search__loginbtn{
+    background-color: rgba(255, 255, 255, 1);
+    color: abs.p_color(true_black, base);
+    border-radius: 0.8rem;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    @include abs.transition_support();
+
+    &:hover{
+      background-color: abs.palette(beige, bright);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  // Search icon
+  &__login-search__search a{
+    @include font-size(2rem);
+  }
+
+  // Default animation for mid-navigation and search links
+  &__mid_navigation__links a,
+  &__login-search__search a{
+    @include abs.transition_support();
+    &:hover{
+      color: lighten(abs.palette(beige, base), 20%);
+    }
+  }
+}

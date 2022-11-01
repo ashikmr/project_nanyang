@@ -1,0 +1,26 @@
+//
+// We'll access fonts variable via sass-mixins.
+//
+
+//
+// Font_Family: Source-sans/serif-Pro
+//
+$s_sans_font: "Source Sans Pro", sans-serif;
+$s_serif_font: "Source Serif Pro", serif;
+
+// Display Font
+// Flood Std Adobe Font
+/*  
+	CSS LINK: <link rel="stylesheet" href="https://use.typekit.net/fal4wrx.css">
+	font-family: flood-std,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+*/
+$display_font: flood-std, sans-serif;
+
+// Font-weights
+$lt: 300; // light
+$rg: 400; // regular
+$sbld: 600; // semi-bold
+$bld: 700; // bold
+$bldr: 900; // bolder
