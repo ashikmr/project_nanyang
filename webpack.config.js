@@ -64,7 +64,7 @@ module.exports = {
 		assetModuleFilename: "images/[hash][ext][query]",
 		/*
 			Without using clean-webpack-plugin.
-			Cleans the /dist folder before each build, so that only used
+			Cleans the compiled files before each build, so that only used
 			files will be generated.
 		*/
 		clean: true,
@@ -102,8 +102,6 @@ module.exports = {
 
 	devServer: {
 		static: "./blogapp/static/blogapp/",
-		// enable hot-reloading
-		hot: true,
     // points to django-server
     // You will not need to change anything in django, also no need for django-webpack-loader
     // django javascript python webpack webpack-dev-server
@@ -113,5 +111,7 @@ module.exports = {
 				changeOrigin: true,
 			},
 		},
+		// enable hot-reloading
+		hot: true,
 	}
 };
