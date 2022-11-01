@@ -19,12 +19,12 @@ your webpack configuration.
 
 target: web -> Compile for usage in a browser-like environment (default)
 */
-let target = "web";
+// let target = "web";
 
-if (process.env.NODE_ENV === "production"){
-	mode = "production";
-	target = "browserslist";
-}
+// if (process.env.NODE_ENV === "production"){
+// 	mode = "production";
+// 	target = "browserslist";
+// }
 
 module.exports = {
 	mode: mode,

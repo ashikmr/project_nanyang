@@ -1,6 +1,6 @@
 {
 	"presets": [[
 		"@babel/preset-env",
-		{"debug": true, "useBuiltIns": "entry", "corejs": 3}
+    {"debug": true, "useBuiltIns": "usage", "corejs":3}
 	]]
 }
