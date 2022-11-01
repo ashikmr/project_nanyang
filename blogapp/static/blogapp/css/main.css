@@ -1,5 +1,5 @@
 /*!********************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/scss/style.scss ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
   \********************************************************************************************************************************************************/
 @charset "UTF-8";
 /*
@@ -19,7 +19,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* 
@@ -102,7 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /*  
@@ -206,9 +207,14 @@ Source: https://www.npmjs.com/package/rfs
  */
 .navbar {
   background-color: rgb(0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   font-size: calc(1.285rem + 0.42vw);
@@ -227,15 +233,21 @@ Source: https://www.npmjs.com/package/rfs
 }
 .navbar__homelink a {
   color: rgb(213, 169, 90);
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .navbar__homelink a:hover {
   color: #ead3ab;
 }
 .navbar__mid_navigation, .navbar__login-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   letter-spacing: 1px;
 }
 .navbar__mid_navigation li, .navbar__login-search li {
@@ -254,6 +266,7 @@ Source: https://www.npmjs.com/package/rfs
   border-radius: 0.8rem;
   padding: 0.6rem 2rem;
   cursor: pointer;
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .navbar__login-search__loginbtn:hover {
@@ -269,6 +282,7 @@ Source: https://www.npmjs.com/package/rfs
   }
 }
 .navbar__mid_navigation__links a, .navbar__login-search__search a {
+  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 .navbar__mid_navigation__links a:hover, .navbar__login-search__search a:hover {
