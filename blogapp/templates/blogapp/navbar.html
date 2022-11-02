@@ -1,0 +1,38 @@
+{% block content %}
+  <nav class="navbar">
+    <!-- First section of navbar -->
+    <div class="navbar__homelink">
+      <h2><a href="#" title="Home Page Link">bookChronicle</a></h2>
+    </div>
+    <!-- Second section of navbar -->
+    <ul class="navbar__mid_navigation">
+      <li class="navbar__mid_navigation__links navbar__mid_navigation__links--explore">
+        <a href="" title="Explore">
+          <i class="fas fa-compass"></i>explore
+        </a>
+      </li>
+      <li class="navbar__mid_navigation__links navbar__mid_navigation__links--videos">
+        <a href="" title="Videos">videos</a>
+      </li>
+      <li class="navbar__mid_navigation__links navbar__mid_navigation__links--about">
+        <a href="" title="About">about</a>
+      </li>
+      <li class="navbar__mid_navigation__links navbar__mid_navigation__links--contact">
+        <a href="" title="Contact">contact</a>
+      </li>
+    </ul>
+    <!-- Third section of navbar -->
+    <ul class="navbar__login-search">
+      <li class="navbar__login-search__login">
+        <button class="navbar__login-search__loginbtn">
+          log in
+        </button>
+      </li>
+      <li class="navbar__login-search__search">
+        <a href="" title="Click to search">
+          <i class="fas fa-search" aria-label="submit search"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+{% endblock content %}
