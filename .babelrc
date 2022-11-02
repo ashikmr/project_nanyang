@@ -1,0 +1,7 @@
+{
+	"presets": [[
+		"@babel/preset-env",
+		// Polyfill and coss-browser async-await support
+		{"debug": true, "useBuiltIns": "entry", "corejs": 3}
+	]]
+}
