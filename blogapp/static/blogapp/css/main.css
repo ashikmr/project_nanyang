@@ -250,6 +250,11 @@ Source: https://www.npmjs.com/package/rfs
       justify-content: space-around;
   letter-spacing: 1px;
 }
+@media (max-width: 768px) {
+  .navbar__mid_navigation, .navbar__login-search {
+    display: none;
+  }
+}
 .navbar__mid_navigation li, .navbar__login-search li {
   margin: 0 1.6rem;
 }
