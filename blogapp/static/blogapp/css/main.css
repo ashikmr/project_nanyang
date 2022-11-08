@@ -288,5 +288,28 @@ Source: https://www.npmjs.com/package/rfs
 .navbar__mid_navigation__links a:hover, .navbar__login-search__search a:hover {
   color: #dfd8c7;
 }
+.navbar__toggle_menu {
+  display: none;
+  font-size: calc(1.325rem + 0.9vw);
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.3rem, 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgb(185, 170, 135);
+}
+@media (max-width: 768px) {
+  .navbar__toggle_menu {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar__toggle_menu {
+    font-size: 2rem;
+  }
+}
+.navbar__toggle_menu .fa-bars {
+  color: white;
+}
 
 /*# sourceMappingURL=main.css.map*/
