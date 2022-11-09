@@ -13,3 +13,11 @@ Source: https://www.npmjs.com/package/rfs
  */
 @import "../../../node_modules/rfs/scss";
 
+// bottom_navbar_mobile --> parent class
+.bottom_navbar_mobile{
+  display: none;
+  @media (max-width:768px){
+    display: block;
+    background-color: red;
+  }
+}

@@ -341,6 +341,16 @@ property with units, like margin, padding, border-radius or even box-shadow.
 
 Source: https://www.npmjs.com/package/rfs
  */
+.bottom_navbar_mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .bottom_navbar_mobile {
+    display: block;
+    background-color: red;
+  }
+}
+
 /*
   The @use rule loads mixins, functions, and variables from other Sass stylesheets,
   and combines CSS from multiple stylesheets together.
