@@ -1,0 +1,15 @@
+// Custom mobile style for blogapp/templates/blogapp/bottom_navbar_mobile.html
+
+@use "../core" as c;
+@use "../abstracts" as abs;
+
+/*
+RFS is a unit resizing engine which was initially developed to 
+resize font sizes (hence its abbreviation for Responsive Font Sizes).
+Nowadays RFS is capable of rescaling basically every value for any css 
+property with units, like margin, padding, border-radius or even box-shadow.
+
+Source: https://www.npmjs.com/package/rfs
+ */
+@import "../../../node_modules/rfs/scss";
+
