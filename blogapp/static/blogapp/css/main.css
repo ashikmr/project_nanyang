@@ -113,6 +113,14 @@ h6 {
 	font-style: normal;
 */
 /*
+  The @forward rule loads a Sass stylesheet and makes its mixins, functions,
+  and variables available when your stylesheet is loaded with the @use rule.
+  It makes it possible to organize Sass libraries across many files, while allowing 
+  their users to load a single entrypoint file.
+
+  @forward "<url>"
+*/
+/*
   The @use rule loads mixins, functions, and variables from other Sass stylesheets,
   and combines CSS from multiple stylesheets together.
   Stylesheets loaded by @use are called "modules".
@@ -187,6 +195,14 @@ h6 {
 */
 /*  
 	=============== Cross-browser transition support ===================
+*/
+/*
+  The @forward rule loads a Sass stylesheet and makes its mixins, functions,
+  and variables available when your stylesheet is loaded with the @use rule.
+  It makes it possible to organize Sass libraries across many files, while allowing 
+  their users to load a single entrypoint file.
+
+  @forward "<url>"
 */
 /*
 ../core folder contains colors, fonts and reset_styles scss files. Only reset_styles.scss code will be globally used evrey time.
@@ -316,5 +332,21 @@ Source: https://www.npmjs.com/package/rfs
 .navbar__toggle_menu .fa-bars {
   color: white;
 }
+
+/*
+  The @use rule loads mixins, functions, and variables from other Sass stylesheets,
+  and combines CSS from multiple stylesheets together.
+  Stylesheets loaded by @use are called "modules".
+  All imported members are namespaced by default.
+
+  @use "<url>" as <namespace>
+
+  The @forward rule loads a Sass stylesheet and makes its mixins, functions, and 
+  variables available when your stylesheet is loaded with the @use rule. It makes
+  it possible to organize Sass libraries across many files, while allowing their 
+  users to load a single entrypoint file.
+
+  @forward "<url>"
+ */
 
 /*# sourceMappingURL=main.css.map*/

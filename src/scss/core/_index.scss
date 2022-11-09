@@ -1,3 +1,11 @@
+/*
+  The @forward rule loads a Sass stylesheet and makes its mixins, functions,
+  and variables available when your stylesheet is loaded with the @use rule.
+  It makes it possible to organize Sass libraries across many files, while allowing 
+  their users to load a single entrypoint file.
+
+  @forward "<url>"
+*/
 @forward "../core/reset_styles";
 @forward "../core/colors";
 @forward "../core/fonts";
