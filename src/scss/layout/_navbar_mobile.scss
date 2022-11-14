@@ -17,7 +17,11 @@ Source: https://www.npmjs.com/package/rfs
 .bottom_navbar_mobile{
   display: none;
   @media (max-width:768px){
-    display: block;
-    background-color: red;
+    display: flex;
+    background-color: purple;
+    position: fixed;
+    bottom: 0;
+    min-width: 100%;
+    overflow-x: auto;
   }
 }
