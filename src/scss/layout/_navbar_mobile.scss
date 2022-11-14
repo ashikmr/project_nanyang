@@ -19,9 +19,19 @@ Source: https://www.npmjs.com/package/rfs
   @media (max-width:768px){
     display: flex;
     background-color: purple;
+    /*
+      positioned relative to the viewport, which means 
+      it always stays in the same place even if the page is scrolled.
+      The top, right, bottom, and left properties are used to
+      position the element.
+    */
     position: fixed;
     bottom: 0;
+    /* makes sure the element is at least as wide as its container */
     min-width: 100%;
+    /* add a horizontal scroll bar, when the content overflows at the
+       left and right edges.*/
     overflow-x: auto;
   }
 }
+
