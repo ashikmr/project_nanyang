@@ -17,7 +17,9 @@ Source: https://www.npmjs.com/package/rfs
 .bottom_navbar_mobile{
   display: none;
   @media (max-width:768px){
-    display: flex;
+    /* display: flex;justify-content_ space-around; */
+    @include abs.flex_justify_content(space-around);
+    align-items: center;
     background-color: abs.palette(beige, base);
     /*
       positioned relative to the viewport, which means 
@@ -34,6 +36,19 @@ Source: https://www.npmjs.com/package/rfs
     overflow-x: auto;
     @include abs.font-type(c.$s_sans_font, c.$bld);
     @include font-size(2.4rem);
+
+    /* Clickable Links */
+    &__links{
+      @include abs.flex_center();
+      /* Changed the direction of viewport for vertical alignment of
+         flex-items */
+      flex-direction: column;
+      
+      /* text-links */
+      &__text{
+        text-transform: capitalize;
+      }
+    }
   }
 }
 

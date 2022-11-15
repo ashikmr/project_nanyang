@@ -346,9 +346,15 @@ Source: https://www.npmjs.com/package/rfs
 }
 @media (max-width: 768px) {
   .bottom_navbar_mobile {
+    /* display: flex;justify-content_ space-around; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: rgb(185, 170, 135);
     /*
       positioned relative to the viewport, which means 
@@ -366,11 +372,35 @@ Source: https://www.npmjs.com/package/rfs
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
     font-size: calc(1.365rem + 1.38vw);
+    /* Clickable Links */
   }
 }
 @media (max-width: 768px) and (min-width: 1200px) {
   .bottom_navbar_mobile {
     font-size: 2.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .bottom_navbar_mobile__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Changed the direction of viewport for vertical alignment of
+       flex-items */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* text-links */
+  }
+  .bottom_navbar_mobile__links__text {
+    text-transform: capitalize;
   }
 }
 
