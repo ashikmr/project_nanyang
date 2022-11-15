@@ -349,7 +349,7 @@ Source: https://www.npmjs.com/package/rfs
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-color: purple;
+    background-color: rgb(185, 170, 135);
     /*
       positioned relative to the viewport, which means 
       it always stays in the same place even if the page is scrolled.
