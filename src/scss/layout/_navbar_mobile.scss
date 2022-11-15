@@ -30,8 +30,10 @@ Source: https://www.npmjs.com/package/rfs
     /* makes sure the element is at least as wide as its container */
     min-width: 100%;
     /* add a horizontal scroll bar, when the content overflows at the
-       left and right edges.*/
+       left and right edges. */
     overflow-x: auto;
+    @include abs.font-type(c.$s_sans_font, c.$bld);
+    @include font-size(2.4rem);
   }
 }
 

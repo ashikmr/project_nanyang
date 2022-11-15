@@ -361,8 +361,16 @@ Source: https://www.npmjs.com/package/rfs
     /* makes sure the element is at least as wide as its container */
     min-width: 100%;
     /* add a horizontal scroll bar, when the content overflows at the
-       left and right edges.*/
+       left and right edges. */
     overflow-x: auto;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    font-size: calc(1.365rem + 1.38vw);
+  }
+}
+@media (max-width: 768px) and (min-width: 1200px) {
+  .bottom_navbar_mobile {
+    font-size: 2.4rem;
   }
 }
 
