@@ -249,8 +249,8 @@ Source: https://www.npmjs.com/package/rfs
 }
 .navbar__homelink a {
   color: rgb(213, 169, 90);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .navbar__homelink a:hover {
   color: #ead3ab;
@@ -287,8 +287,8 @@ Source: https://www.npmjs.com/package/rfs
   border-radius: 0.8rem;
   padding: 0.6rem 2rem;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .navbar__login-search__loginbtn:hover {
   background-color: rgb(213, 169, 90);
@@ -303,8 +303,8 @@ Source: https://www.npmjs.com/package/rfs
   }
 }
 .navbar__mid_navigation__links a, .navbar__login-search__search a {
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .navbar__mid_navigation__links a:hover, .navbar__login-search__search a:hover {
   color: #dfd8c7;
@@ -370,7 +370,7 @@ Source: https://www.npmjs.com/package/rfs
        left and right edges. */
     overflow-x: auto;
     font-family: "Source Sans Pro", sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: calc(1.365rem + 1.38vw);
     /* Clickable Links */
   }
@@ -397,7 +397,14 @@ Source: https://www.npmjs.com/package/rfs
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    color: rgb(0, 0, 0);
+    /* hover-effect */
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
     /* text-links */
+  }
+  .bottom_navbar_mobile__links:hover {
+    color: rgb(255, 255, 255);
   }
   .bottom_navbar_mobile__links__text {
     text-transform: capitalize;

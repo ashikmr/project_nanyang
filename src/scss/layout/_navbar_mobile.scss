@@ -34,7 +34,7 @@ Source: https://www.npmjs.com/package/rfs
     /* add a horizontal scroll bar, when the content overflows at the
        left and right edges. */
     overflow-x: auto;
-    @include abs.font-type(c.$s_sans_font, c.$bld);
+    @include abs.font-type(c.$s_sans_font, c.$sbld);
     @include font-size(2.4rem);
 
     /* Clickable Links */
@@ -43,6 +43,12 @@ Source: https://www.npmjs.com/package/rfs
       /* Changed the direction of viewport for vertical alignment of
          flex-items */
       flex-direction: column;
+      color: abs.p_color(true_black, base);
+      /* hover-effect */
+      @include abs.transition_support();
+      &:hover{
+        color: abs.p_color(white, base);
+      }
       
       /* text-links */
       &__text{
