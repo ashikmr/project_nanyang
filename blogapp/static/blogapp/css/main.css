@@ -356,6 +356,7 @@ Source: https://www.npmjs.com/package/rfs
         -ms-flex-align: center;
             align-items: center;
     background-color: rgb(185, 170, 135);
+    padding: 1rem 0;
     /*
       positioned relative to the viewport, which means 
       it always stays in the same place even if the page is scrolled.
@@ -371,18 +372,17 @@ Source: https://www.npmjs.com/package/rfs
     overflow-x: auto;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
-    font-size: calc(1.365rem + 1.38vw);
+    font-size: calc(1.285rem + 0.42vw);
     /* Clickable Links */
   }
 }
 @media (max-width: 768px) and (min-width: 1200px) {
   .bottom_navbar_mobile {
-    font-size: 2.4rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 768px) {
   .bottom_navbar_mobile__links {
-    background-color: red;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
