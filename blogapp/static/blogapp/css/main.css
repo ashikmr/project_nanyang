@@ -382,6 +382,7 @@ Source: https://www.npmjs.com/package/rfs
 }
 @media (max-width: 768px) {
   .bottom_navbar_mobile__links {
+    background-color: red;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
