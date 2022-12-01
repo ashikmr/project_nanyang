@@ -102,29 +102,4 @@ Source: https://www.npmjs.com/package/rfs
       color: lighten(abs.palette(beige, base), 20%);
     }
   }
-
-  // Menu bar
-  &__toggle_menu{
-    display: none;
-    @media (max-width: 768px){
-	    display: block;
-      z-index: 9999;
-    }
-    @include font-size(2rem);
-    border: none;
-    border-radius: 0.4rem;
-    padding: 0.3rem, 1.2rem;
-    cursor: pointer;
-    text-align: center;
-    background-color: abs.palette(beige, base);
-    // Menu Icon
-    .fa-bars{
-	    color: white;
-    }
-  }
-
-  // @media (max-width: 768px){
-  //   position: fixed;
-  //   inset: 0 0 0 30%;
-  // }
 }
