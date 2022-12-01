@@ -346,7 +346,7 @@ Source: https://www.npmjs.com/package/rfs
 }
 @media (max-width: 768px) {
   .bottom_navbar_mobile {
-    /* display: flex;justify-content_ space-around; */
+    /* display: flex;justify-content: space-around; */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -358,7 +358,7 @@ Source: https://www.npmjs.com/package/rfs
     background-color: rgb(185, 170, 135);
     padding: 1rem 0;
     /*
-      positioned relative to the viewport, which means 
+      positioned fixed to the viewport, which means 
       it always stays in the same place even if the page is scrolled.
       The top, right, bottom, and left properties are used to
       position the element.

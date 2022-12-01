@@ -17,13 +17,13 @@ Source: https://www.npmjs.com/package/rfs
 .bottom_navbar_mobile{
   display: none;
   @media (max-width:768px){
-    /* display: flex;justify-content_ space-around; */
+    /* display: flex;justify-content: space-around; */
     @include abs.flex_justify_content(space-around);
     align-items: center;
     background-color: abs.palette(beige, base);
     padding: 1rem 0;
     /*
-      positioned relative to the viewport, which means 
+      positioned fixed to the viewport, which means 
       it always stays in the same place even if the page is scrolled.
       The top, right, bottom, and left properties are used to
       position the element.
