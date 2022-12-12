@@ -108,6 +108,12 @@ Source: https://www.npmjs.com/package/rfs
     display: none;
     @media (max-width: 768px){
       display: block;
+      cursor: pointer;
+      @include font-size(2rem);
+      padding: 0 0.8rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: abs.p_color(white, base);
     }
   }
 }

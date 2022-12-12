@@ -315,6 +315,17 @@ Source: https://www.npmjs.com/package/rfs
 @media (max-width: 768px) {
   .navbar__menubars {
     display: block;
+    cursor: pointer;
+    font-size: calc(1.325rem + 0.9vw);
+    padding: 0 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+  }
+}
+@media (max-width: 768px) and (min-width: 1200px) {
+  .navbar__menubars {
+    font-size: 2rem;
   }
 }
 
