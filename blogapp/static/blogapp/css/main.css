@@ -314,6 +314,7 @@ Source: https://www.npmjs.com/package/rfs
 }
 @media (max-width: 768px) {
   .navbar__menubars {
+    /* Show menu-bars for mobile-version. */
     display: block;
     cursor: pointer;
     font-size: calc(1.325rem + 0.9vw);
