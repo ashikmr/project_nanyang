@@ -116,6 +116,11 @@ Source: https://www.npmjs.com/package/rfs
       border: none;
       border-radius: 0.5rem;
       background-color: abs.p_color(white, base);
+      @include abs.transition_support();
+      /* Hover effects */
+      &:hover{
+        background-color: abs.palette(beige, base);
+      }
     }
   }
 }

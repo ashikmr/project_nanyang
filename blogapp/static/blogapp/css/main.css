@@ -322,11 +322,19 @@ Source: https://www.npmjs.com/package/rfs
     border: none;
     border-radius: 0.5rem;
     background-color: rgb(255, 255, 255);
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    /* Hover effects */
   }
 }
 @media (max-width: 768px) and (min-width: 1200px) {
   .navbar__menubars {
     font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .navbar__menubars:hover {
+    background-color: rgb(185, 170, 135);
   }
 }
 
