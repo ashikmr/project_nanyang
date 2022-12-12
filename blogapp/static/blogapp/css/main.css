@@ -309,6 +309,14 @@ Source: https://www.npmjs.com/package/rfs
 .navbar__mid_navigation__links a:hover, .navbar__login-search__search a:hover {
   color: #dfd8c7;
 }
+.navbar__menubars {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar__menubars {
+    display: block;
+  }
+}
 
 /*
 RFS is a unit resizing engine which was initially developed to 

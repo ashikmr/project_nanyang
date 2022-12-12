@@ -102,4 +102,12 @@ Source: https://www.npmjs.com/package/rfs
       color: lighten(abs.palette(beige, base), 20%);
     }
   }
+
+  // Menu-bars
+  &__menubars{
+    display: none;
+    @media (max-width: 768px){
+      display: block;
+    }
+  }
 }
