@@ -107,6 +107,7 @@ Source: https://www.npmjs.com/package/rfs
   &__menubars{
     // Hide menu-bars for desktop-version.
     display: none;
+    // Media-queries for mobile version.
     @media (max-width: 768px){
       /* Show menu-bars for mobile-version. */
       display: block;
