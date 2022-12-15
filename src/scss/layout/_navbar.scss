@@ -73,6 +73,14 @@ Source: https://www.npmjs.com/package/rfs
     text-transform: capitalize;
     font-weight: 600;
   }
+
+  // Hide/Show login_btn in desktop_mode/mobile_mode.
+  &__mid_navigation__links--login_mobile_btn{
+    display: none;
+    @media (max-width: 768px){
+      display: block;
+    }
+  }
   
   // Login button
   &__login-search__loginbtn{
@@ -124,4 +132,30 @@ Source: https://www.npmjs.com/package/rfs
       }
     }
   }
+}
+
+//
+// Menu-bar style for mobile devices
+//
+@media (max-width: 768px){
+  .navbar__mid_navigation{
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 30rem;
+    min-width: 20rem;
+    overflow: auto;
+  }
+
+  // .navbar__login-search{
+  //   position: absolute;
+  //   right: 0;
+  //   top: 10rem;
+  //   background-color: green;
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 }

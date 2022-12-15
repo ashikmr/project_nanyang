@@ -281,6 +281,14 @@ Source: https://www.npmjs.com/package/rfs
   text-transform: capitalize;
   font-weight: 600;
 }
+.navbar__mid_navigation__links--login_mobile_btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar__mid_navigation__links--login_mobile_btn {
+    display: block;
+  }
+}
 .navbar__login-search__loginbtn {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -338,6 +346,24 @@ Source: https://www.npmjs.com/package/rfs
   }
 }
 
+@media (max-width: 768px) {
+  .navbar__mid_navigation {
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 30rem;
+    min-width: 20rem;
+    overflow: auto;
+  }
+}
 /*
 RFS is a unit resizing engine which was initially developed to 
 resize font sizes (hence its abbreviation for Responsive Font Sizes).
