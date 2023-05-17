@@ -345,6 +345,9 @@ Source: https://www.npmjs.com/package/rfs
     background-color: rgb(185, 170, 135);
   }
 }
+.navbar__sidemenu_closebtn {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .navbar__mid_navigation {
@@ -372,6 +375,16 @@ Source: https://www.npmjs.com/package/rfs
     min-width: 20rem;
     /* adds scrollbars only when necessary */
     overflow: auto;
+  }
+  /* Side-menu closebtn */
+  .navbar__sidemenu_closebtn {
+    display: block;
+    /* Stay on top of overlay sidemenu */
+    z-index: 2;
+    /* absolute(below) uses the document body, and moves along with page scrolling */
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
   }
 }
 /*

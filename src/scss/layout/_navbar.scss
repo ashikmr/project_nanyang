@@ -132,6 +132,12 @@ Source: https://www.npmjs.com/package/rfs
       }
     }
   }
+
+  // Side-menu close button
+  &__sidemenu_closebtn{
+    // Hide close-btn for desktop-version.
+    display: none;
+  }
 }
 
 //
@@ -157,4 +163,16 @@ Source: https://www.npmjs.com/package/rfs
     /* adds scrollbars only when necessary */
     overflow: auto;
   }
+  
+  /* Side-menu closebtn */
+  .navbar__sidemenu_closebtn{
+    display: block;
+    /* Stay on top of overlay sidemenu */
+    z-index: 2;
+    /* absolute(below) uses the document body, and moves along with page scrolling */
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+
 }
