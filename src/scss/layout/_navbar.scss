@@ -169,7 +169,8 @@ Source: https://www.npmjs.com/package/rfs
     display: block;
     /* Stay on top of overlay sidemenu */
     z-index: 2;
-    /* absolute(below) uses the document body, and moves along with page scrolling */
+    /* absolute(below) uses the document body, and moves along with page scrolling.
+     Position the closebtn to the top-right corner.*/
     position: absolute;
     top: 2.5rem;
     right: 2.5rem;
