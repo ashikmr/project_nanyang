@@ -221,6 +221,7 @@ property with units, like margin, padding, border-radius or even box-shadow.
 
 Source: https://www.npmjs.com/package/rfs
  */
+/* NOTE: Mid-navigation style in mobile devices is written in sidebar.scss */
 .navbar {
   background-color: rgb(0, 0, 0);
   display: -webkit-box;

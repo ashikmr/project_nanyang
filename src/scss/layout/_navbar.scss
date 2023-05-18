@@ -21,6 +21,8 @@ Source: https://www.npmjs.com/package/rfs
  */
 @import "../../../node_modules/rfs/scss";
 
+/* NOTE: Mid-navigation style in mobile devices is written in sidebar.scss */
+
 // .navbar --> parent class
 .navbar{
   background-color: abs.p_color(true_black, base);
