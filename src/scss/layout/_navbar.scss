@@ -159,6 +159,7 @@ Source: https://www.npmjs.com/package/rfs
     justify-content: space-evenly;
     /* 100% full-height */
     height: 100%;
+    /* 0 width - change this with JavaScript */
     min-width: 20rem;
     /* adds scrollbars only when necessary */
     overflow: auto;

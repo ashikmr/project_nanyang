@@ -1,6 +1,16 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/functions/functions.js":
+/*!***************************************!*\
+  !*** ./src/js/functions/functions.js ***!
+  \***************************************/
+/***/ (() => {
+
+console.log("hello functions");
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/a-callable.js":
 /*!******************************************************!*\
   !*** ./node_modules/core-js/internals/a-callable.js ***!
@@ -4186,15 +4196,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../scss/style.scss */ "./src/scss/style.scss");
+/* harmony import */ var _js_functions_functions_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../js/functions/functions.js */ "./src/js/functions/functions.js");
+/* harmony import */ var _js_functions_functions_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_js_functions_functions_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scss/style.scss */ "./src/scss/style.scss");
 
 
+
+
+/* Importing functions module from src/ directory */
 
 
 // importing style.scss
 
-
-// alert('Hello World');
 })();
 
 /******/ })()
