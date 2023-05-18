@@ -349,56 +349,6 @@ Source: https://www.npmjs.com/package/rfs
   display: none;
 }
 
-@media (max-width: 768px) {
-  .navbar__mid_navigation {
-    /* it always stays in the same place even if the page is scrolled */
-    position: fixed;
-    /* Stay at the top */
-    top: 0;
-    right: 0;
-    /* Stay on top */
-    z-index: 1;
-    background-color: black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    /* link items will have equal space around them */
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    /* 100% full-height */
-    height: 100%;
-    /* 0 width - change this with JavaScript */
-    min-width: 20rem;
-    /* adds scrollbars only when necessary */
-    overflow: auto;
-  }
-  /* Side-menu closebtn */
-  .navbar__sidemenu_closebtn {
-    display: block;
-    /* Stay on top of overlay sidemenu */
-    z-index: 2;
-    /* absolute(below) uses the document body, and moves along with page scrolling.
-     Position the closebtn to the top-right corner.*/
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    background: transparent;
-    cursor: pointer;
-    color: grey;
-    font-size: 2.4rem;
-    /*Animation and hover effects */
-    -webkit-transition: all 0.4s ease-in;
-    transition: all 0.4s ease-in;
-  }
-  .navbar__sidemenu_closebtn:hover {
-    color: #b3b3b3;
-  }
-}
 /*
 RFS is a unit resizing engine which was initially developed to 
 resize font sizes (hence its abbreviation for Responsive Font Sizes).
@@ -478,6 +428,64 @@ Source: https://www.npmjs.com/package/rfs
   }
 }
 
+/*
+RFS is a unit resizing engine which was initially developed to 
+resize font sizes (hence its abbreviation for Responsive Font Sizes).
+Nowadays RFS is capable of rescaling basically every value for any css 
+property with units, like margin, padding, border-radius or even box-shadow.
+
+Source: https://www.npmjs.com/package/rfs
+ */
+@media (max-width: 768px) {
+  .navbar__mid_navigation {
+    /* it always stays in the same place even if the page is scrolled */
+    position: fixed;
+    /* Stay at the top */
+    top: 0;
+    right: 0;
+    /* Stay on top */
+    z-index: 1;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* link items will have equal space around them */
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    /* 100% full-height */
+    height: 100%;
+    /* 0 width - change this with JavaScript */
+    min-width: 20rem;
+    /* adds scrollbars only when necessary */
+    overflow: auto;
+  }
+  /* Side-menu closebtn */
+  .navbar__sidemenu_closebtn {
+    display: block;
+    /* Stay on top of overlay sidemenu */
+    z-index: 2;
+    /* absolute(below) uses the document body, and moves along with page scrolling.
+     Position the closebtn to the top-right corner.*/
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    background: transparent;
+    cursor: pointer;
+    color: grey;
+    font-size: 2.4rem;
+    /*Animation and hover effects */
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+  }
+  .navbar__sidemenu_closebtn:hover {
+    color: #b3b3b3;
+  }
+}
 /*
   The @use rule loads mixins, functions, and variables from other Sass stylesheets,
   and combines CSS from multiple stylesheets together.
