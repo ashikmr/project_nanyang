@@ -97,4 +97,83 @@ Source: https://www.npmjs.com/package/rfs
       color: lighten(abs.palette(beige, base), 20%);
     }
   }
+<<<<<<< HEAD
+=======
+
+  // Menu-bars
+  &__menubars{
+    // Hide menu-bars for desktop-version.
+    display: none;
+    // Media-queries for mobile version.
+    @media (max-width: 768px){
+      /* Show menu-bars for mobile-version. */
+      display: block;
+      cursor: pointer;
+      @include font-size(2rem);
+      padding: 0 0.8rem;
+      border: none;
+      border-radius: 0.5rem;
+      background-color: abs.p_color(white, base);
+      @include abs.transition_support();
+      /* Hover effects */
+      &:hover{
+        background-color: abs.palette(beige, base);
+      }
+    }
+  }
+
+  // Side-menu close button
+  &__sidemenu_closebtn{
+    // Hide close-btn for desktop-version.
+    display: none;
+  }
+}
+
+//
+// Menu-bar style for mobile devices
+//
+@media (max-width: 768px){
+  .navbar__mid_navigation{
+    /* it always stays in the same place even if the page is scrolled */
+    position: fixed;
+    /* Stay at the top */ 
+    top: 0;
+    right: 0;
+    /* Stay on top */
+    z-index: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    /* link items will have equal space around them */
+    justify-content: space-evenly;
+    /* 100% full-height */
+    height: 100%;
+    /* 0 width - change this with JavaScript */
+    min-width: 20rem;
+    /* adds scrollbars only when necessary */
+    overflow: auto;
+  }
+  
+  /* Side-menu closebtn */
+  .navbar__sidemenu_closebtn{
+    display: block;
+    /* Stay on top of overlay sidemenu */
+    z-index: 2;
+    /* absolute(below) uses the document body, and moves along with page scrolling.
+     Position the closebtn to the top-right corner.*/
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    background: transparent;
+    cursor: pointer;
+    color: grey;
+    font-size: 2.4rem;
+    /*Animation and hover effects */
+    @include abs.transition_support();
+    &:hover{
+      color: lighten(grey, 20%);
+    }
+  }
+
+>>>>>>> 1cda0c5 (Created src/js/functions/ file structure for better organization of js)
 }
