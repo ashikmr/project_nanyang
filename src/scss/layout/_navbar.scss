@@ -109,7 +109,7 @@ Source: https://www.npmjs.com/package/rfs
   &__login-search__search a{
     @include abs.transition_support();
     &:hover{
-      color: lighten(abs.palette(beige, base), 20%);
+      color: lighten(abs.palette(beige, base), 40%);
     }
   }
 }
