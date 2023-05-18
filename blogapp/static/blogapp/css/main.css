@@ -221,6 +221,7 @@ property with units, like margin, padding, border-radius or even box-shadow.
 
 Source: https://www.npmjs.com/package/rfs
  */
+/* NOTE: Mid-navigation style in mobile devices is written in sidebar.scss */
 .navbar {
   background-color: rgb(0, 0, 0);
   display: -webkit-box;
@@ -249,8 +250,8 @@ Source: https://www.npmjs.com/package/rfs
 }
 .navbar__homelink a {
   color: rgb(213, 169, 90);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .navbar__homelink a:hover {
   color: #ead3ab;
@@ -281,14 +282,22 @@ Source: https://www.npmjs.com/package/rfs
   text-transform: capitalize;
   font-weight: 600;
 }
+.navbar__mid_navigation__links--login_mobile_btn {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navbar__mid_navigation__links--login_mobile_btn {
+    display: block;
+  }
+}
 .navbar__login-search__loginbtn {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-radius: 0.8rem;
   padding: 0.6rem 2rem;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .navbar__login-search__loginbtn:hover {
   background-color: rgb(213, 169, 90);
@@ -303,13 +312,150 @@ Source: https://www.npmjs.com/package/rfs
   }
 }
 .navbar__mid_navigation__links a, .navbar__login-search__search a {
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .navbar__mid_navigation__links a:hover, .navbar__login-search__search a:hover {
   color: #dfd8c7;
 }
 
+/*
+RFS is a unit resizing engine which was initially developed to 
+resize font sizes (hence its abbreviation for Responsive Font Sizes).
+Nowadays RFS is capable of rescaling basically every value for any css 
+property with units, like margin, padding, border-radius or even box-shadow.
+
+Source: https://www.npmjs.com/package/rfs
+ */
+.bottom_navbar_mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .bottom_navbar_mobile {
+    /* display: flex;justify-content: space-around; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgb(185, 170, 135);
+    padding: 1rem 0;
+    /*
+      positioned fixed to the viewport, which means 
+      it always stays in the same place even if the page is scrolled.
+      The top, right, bottom, and left properties are used to
+      position the element.
+    */
+    position: fixed;
+    bottom: 0;
+    /* makes sure the element is at least as wide as its container */
+    min-width: 100%;
+    /* add a horizontal scroll bar, when the content overflows at the
+       left and right edges. */
+    overflow-x: auto;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: calc(1.285rem + 0.42vw);
+    /* Clickable Links */
+  }
+}
+@media (max-width: 768px) and (min-width: 1200px) {
+  .bottom_navbar_mobile {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .bottom_navbar_mobile__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Changed the direction of viewport for vertical alignment of
+       flex-items */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: rgb(0, 0, 0);
+    /* hover-effect */
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    /* text-links */
+  }
+  .bottom_navbar_mobile__links:hover {
+    color: rgb(255, 255, 255);
+  }
+  .bottom_navbar_mobile__links__text {
+    text-transform: capitalize;
+  }
+}
+
+/*
+RFS is a unit resizing engine which was initially developed to 
+resize font sizes (hence its abbreviation for Responsive Font Sizes).
+Nowadays RFS is capable of rescaling basically every value for any css 
+property with units, like margin, padding, border-radius or even box-shadow.
+
+Source: https://www.npmjs.com/package/rfs
+ */
+@media (max-width: 768px) {
+  .navbar__mid_navigation {
+    /* it always stays in the same place even if the page is scrolled */
+    position: fixed;
+    /* Stay at the top */
+    top: 0;
+    right: 0;
+    /* Stay on top */
+    z-index: 1;
+    background-color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* link items will have equal space around them */
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    /* 100% full-height */
+    height: 100%;
+    /* 0 width - change this with JavaScript */
+    min-width: 20rem;
+    /* adds scrollbars only when necessary */
+    overflow: auto;
+  }
+  /* Side-menu closebtn */
+  .navbar__sidemenu_closebtn {
+    display: block;
+    /* Stay on top of overlay sidemenu */
+    z-index: 2;
+    /* absolute(below) uses the document body, and moves along with page scrolling.
+     Position the closebtn to the top-right corner.*/
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    background: transparent;
+    cursor: pointer;
+    color: grey;
+    font-size: 2.4rem;
+    /*Animation and hover effects */
+    -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+  }
+  .navbar__sidemenu_closebtn:hover {
+    color: #b3b3b3;
+  }
+}
 /*
   The @use rule loads mixins, functions, and variables from other Sass stylesheets,
   and combines CSS from multiple stylesheets together.

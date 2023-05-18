@@ -21,6 +21,8 @@ Source: https://www.npmjs.com/package/rfs
  */
 @import "../../../node_modules/rfs/scss";
 
+/* NOTE: Mid-navigation style in mobile devices is written in sidebar.scss */
+
 // .navbar --> parent class
 .navbar{
   background-color: abs.p_color(true_black, base);
@@ -72,6 +74,14 @@ Source: https://www.npmjs.com/package/rfs
   &__mid_navigation__links a{
     text-transform: capitalize;
     font-weight: 600;
+  }
+
+  // Hide/Show login_btn in desktop_mode/mobile_mode.
+  &__mid_navigation__links--login_mobile_btn{
+    display: none;
+    @media (max-width: 768px){
+      display: block;
+    }
   }
   
   // Login button

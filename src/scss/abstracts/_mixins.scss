@@ -176,6 +176,6 @@
 	=============== Cross-browser transition support ===================
 */
 @mixin transition_support($seconds: 0.4s){
-  transition: all $seconds ease;
+  transition: all $seconds ease-in;
 }
 

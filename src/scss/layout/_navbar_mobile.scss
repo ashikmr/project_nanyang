@@ -1,0 +1,63 @@
+// Custom mobile style for blogapp/templates/blogapp/bottom_navbar_mobile.html
+
+@use "../core" as c;
+@use "../abstracts" as abs;
+
+/*
+RFS is a unit resizing engine which was initially developed to 
+resize font sizes (hence its abbreviation for Responsive Font Sizes).
+Nowadays RFS is capable of rescaling basically every value for any css 
+property with units, like margin, padding, border-radius or even box-shadow.
+
+Source: https://www.npmjs.com/package/rfs
+ */
+@import "../../../node_modules/rfs/scss";
+
+// bottom_navbar_mobile --> parent class
+.bottom_navbar_mobile{
+  // Hide menu on desktop-mode
+  display: none;
+  @media (max-width:768px){
+    /* display: flex;justify-content: space-around; */
+    @include abs.flex_justify_content(space-around);
+    align-items: center;
+    background-color: abs.palette(beige, base);
+    padding: 1rem 0;
+    /*
+      positioned fixed to the viewport, which means 
+      it always stays in the same place even if the page is scrolled.
+      The top, right, bottom, and left properties are used to
+      position the element.
+    */
+    position: fixed;
+    bottom: 0;
+    /* makes sure the element is at least as wide as its container */
+    min-width: 100%;
+    /* add a horizontal scroll bar, when the content overflows at the
+       left and right edges. */
+    overflow-x: auto;
+    @include abs.font-type(c.$s_sans_font, c.$sbld);
+    @include font-size(1.6rem);
+
+    /* Clickable Links */
+    &__links{
+      // background-color: red;
+      @include abs.flex_center();
+      /* Changed the direction of viewport for vertical alignment of
+         flex-items */
+      flex-direction: column;
+      color: abs.p_color(true_black, base);
+      /* hover-effect */
+      @include abs.transition_support();
+      &:hover{
+        color: abs.p_color(white, base);
+      }
+      
+      /* text-links */
+      &__text{
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
