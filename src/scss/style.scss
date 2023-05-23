@@ -1,1 +1,19 @@
-@use "./layout/navbar";
+/*
+  The @use rule loads mixins, functions, and variables from other Sass stylesheets,
+  and combines CSS from multiple stylesheets together.
+  Stylesheets loaded by @use are called "modules".
+  All imported members are namespaced by default.
+
+  @use "<url>" as <namespace>
+
+  The @forward rule loads a Sass stylesheet and makes its mixins, functions, and 
+  variables available when your stylesheet is loaded with the @use rule. It makes
+  it possible to organize Sass libraries across many files, while allowing their 
+  users to load a single entrypoint file.
+
+  @forward "<url>"
+ */
+
+@use "./layout/navbar"; // Desktop navbar layout
+@use "./layout/navbar_mobile"; // Mobile navbar layout
+@use "./layout/sidebar"; // Mobile side-menu-navbar layout

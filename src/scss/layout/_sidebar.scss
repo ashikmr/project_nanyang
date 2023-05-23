@@ -1,0 +1,61 @@
+// Custom mobile style for blogapp/templates/blogapp/bottom_navbar_mobile.html
+
+@use "../core" as c;
+@use "../abstracts" as abs;
+
+/*
+RFS is a unit resizing engine which was initially developed to 
+resize font sizes (hence its abbreviation for Responsive Font Sizes).
+Nowadays RFS is capable of rescaling basically every value for any css 
+property with units, like margin, padding, border-radius or even box-shadow.
+
+Source: https://www.npmjs.com/package/rfs
+ */
+@import "../../../node_modules/rfs/scss";
+
+//
+// SideMenu-bar style for mobile devices
+//
+@media (max-width: 768px){
+  .navbar__mid_navigation{
+    /* it always stays in the same place even if the page is scrolled */
+    position: fixed;
+    /* Stay at the top */ 
+    top: 0;
+    right: 0;
+    /* Stay on top */
+    z-index: 1;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    /* link items will have equal space around them */
+    justify-content: space-evenly;
+    /* 100% full-height */
+    height: 100%;
+    /* 0 width - change this with JavaScript */
+    min-width: 20rem;
+    /* adds scrollbars only when necessary */
+    overflow: auto;
+  }
+  
+  /* Side-menu closebtn */
+  .navbar__sidemenu_closebtn{
+    display: block;
+    /* Stay on top of overlay sidemenu */
+    z-index: 2;
+    /* absolute(below) uses the document body, and moves along with page scrolling.
+     Position the closebtn to the top-right corner.*/
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    background: transparent;
+    cursor: pointer;
+    color: grey;
+    font-size: 2.4rem;
+    /*Animation and hover effects */
+    @include abs.transition_support();
+    &:hover{
+      color: lighten(grey, 20%);
+    }
+  }
+}
