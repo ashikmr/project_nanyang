@@ -311,6 +311,9 @@ Source: https://www.npmjs.com/package/rfs
     font-size: 2rem;
   }
 }
+.navbar__sidemenu_closebtn {
+  display: none;
+}
 .navbar__mid_navigation__links a, .navbar__login-search__search a {
   -webkit-transition: all 0.4s ease-in;
   transition: all 0.4s ease-in;

@@ -104,6 +104,11 @@ Source: https://www.npmjs.com/package/rfs
     @include font-size(2rem);
   }
 
+  // Sidemenu close button
+  &__sidemenu_closebtn{
+    display: none;
+  }
+
   // Default animation for mid-navigation and search links
   &__mid_navigation__links a,
   &__login-search__search a{
